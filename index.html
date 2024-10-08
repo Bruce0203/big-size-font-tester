@@ -2,26 +2,32 @@
 
 <strong id="text" style="font-size: 200px">text</strong>
 <form>
-  <input type="text" id="text" name="text" cols="60" rows="50" placeholder="text" required>
+	<textarea name="text" placeholder="text" required></textarea>
 </form>
 <style>
-  form {
-    position: absolute;
-    bottom: 0px;
-  }
-  strong {
-    padding: 10%;
-  text-align: center;
-  }
+	form {
+		position: absolute;
+		bottom: 0px;
+	}
+
+	strong {
+		text-align: center;
+		white-space: pre-wrap;
+	}
+
+	textarea {
+		white-space: pre-wrap;
+	}
+
 </style>
 <script>
-const input = document.querySelector('input');
-const log = document.getElementById('text');
+	const input = document.querySelector('textarea');
+	const log = document.getElementById('text');
 
-input.addEventListener('input', updateValue);
+	input.addEventListener('input', updateValue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
-}
+	function updateValue(e) {
+		log.textContent = e.target.value;
+	}
 
 </script>
